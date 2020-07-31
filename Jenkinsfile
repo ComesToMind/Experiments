@@ -14,7 +14,7 @@ pipeline{
                 sh 'docker create -it --name tempor task4:1 bash'
                 sh 'docker cp tempor:/var/www/html $(pwd)'
                 sh 'docker rm -f tempor'
-                sh 'ls -lah' 
+                sh 'ls -lah ./temp' 
 
             }
         }
