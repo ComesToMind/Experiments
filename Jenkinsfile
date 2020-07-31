@@ -5,7 +5,7 @@ pipeline{
         stage("create docker image") {
             steps {
                 echo "================= start building image ================="
-                sh 'docker build . -t task4:1 --no-cache'
+                sh 'docker build . -t task4:1'
             }
         }
         stage("copying simplephp files from docker image") {
@@ -14,7 +14,7 @@ pipeline{
                 sh 'docker create -it --name tempor task4:1 bash'
                 sh 'docker cp tempor:/var/www/html $(pwd)'
                 sh 'docker rm -f tempor'
-                sh 'll' 
+                sh 'ls -lah' 
 
             }
         }
