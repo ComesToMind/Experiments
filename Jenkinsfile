@@ -5,7 +5,7 @@ pipeline{
         stage("create docker image") {
             steps {
                 echo "================= start building image ================="
-                sh 'docker build . -t Task4:1 --no-cahe'
+                sh 'docker build . -t task4:1 --no-cahe'
             }
         }
     }
