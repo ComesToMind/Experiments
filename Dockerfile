@@ -22,4 +22,4 @@ RUN php artisan key:generate
 RUN npm install
 RUN npm run production
 EXPOSE 8080
-CMD tail -f /dev/null
+CMD ["tail", "-f", "/dev/null"]
